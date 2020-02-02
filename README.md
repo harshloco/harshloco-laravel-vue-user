@@ -3,7 +3,7 @@ Steps to do :
 
 1: Create mysql database 'laravel'
 
-2. run command 'npm i'
+2: run command 'npm i'
 
 3: cd into the cloned folder, run command 'php artisan migrate'
 
