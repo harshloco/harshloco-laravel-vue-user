@@ -1,3 +1,14 @@
+Steps to do : 
+
+
+1: Create mysql database 'laravel'
+
+2: cd into the cloned folder, run command 'php artisan migrate'
+
+3: run command 'php artisan db:seed'
+
+4: run command 'php artisan serve'
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
