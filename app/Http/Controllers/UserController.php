@@ -47,21 +47,22 @@ class UserController extends Controller
             $last_logged_in = $user->last_logged_in;
             $user_type = $user->user_type;
             $authorized = $user->authorized;
-            
+            $authorized_at = "UNAUTHORIZED" ;
             //get user_name based on the valueuser_type value
             if($user_type > 0){
                 $user_types = DB::table('usertypes')
                     ->where('id',$user_type >0 ?"=":"<>",   $user_type )
                     ->first();
-                $user_type = $user_types->user_name;
+                $user_type = strtoupper($user_types->user_name);
+                $authorized_at = $user_types->authorized_at;
             }else{
                 $user_type ="UNAUTHORIZED";
             }
            if($authorized > 0){
                 
-                $authorized = "AUTHORIZED";
+                $authorized = $authorized_at;
             }else{
-                $authorized ="UNAUTHORIZED";
+                $authorized =$authorized_at;
             }
             
             //create each user record with user _type and authroized

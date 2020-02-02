@@ -1984,16 +1984,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2084,7 +2074,7 @@ __webpack_require__.r(__webpack_exports__);
         Object.assign(this.tableData[this.editedIndex], this.editedItem);
         axios.get("/userUpdate/" + this.editedItem.id + "/" + this.editedItem.role.id).then(function (response) {
           if (response.data == "success") {
-            _this3.tableData[_this3.editedIndex].user_type = _this3.editedItem.role.name;
+            _this3.tableData[_this3.editedIndex].user_type = _this3.editedItem.role.name.toUpperCase();
           }
         });
       }
@@ -39844,20 +39834,18 @@ var render = function() {
             [
               _c(
                 "v-card",
-                { staticClass: "mx-auto", attrs: { "max-width": "80%" } },
+                { staticClass: "mx-auto", attrs: { "max-width": "90%" } },
                 [
                   _c(
                     "v-card-title",
                     [
-                      _vm._v(
-                        "\n                    Users\n                    "
-                      ),
+                      _vm._v("\n          Users\n          "),
                       _c("v-spacer"),
                       _vm._v(" "),
                       _c(
                         "v-dialog",
                         {
-                          attrs: { "max-width": "700px" },
+                          attrs: { "max-width": "80%" },
                           model: {
                             value: _vm.dialog,
                             callback: function($$v) {
@@ -39872,11 +39860,7 @@ var render = function() {
                             [
                               _c("v-card-title", [
                                 _c("span", { staticClass: "headline" }, [
-                                  _vm._v(
-                                    "\n                                    " +
-                                      _vm._s(_vm.formTitle) +
-                                      "\n                                "
-                                  )
+                                  _vm._v(_vm._s(_vm.formTitle))
                                 ])
                               ]),
                               _vm._v(" "),
@@ -40002,20 +39986,19 @@ var render = function() {
                           var item = ref.item
                           return [
                             _c(
-                              "v-chip",
+                              "v-sheet",
                               {
+                                staticClass:
+                                  "d-flex m-2 justify-center white--text",
                                 attrs: {
-                                  color: _vm.getColor(item.authorized),
-                                  dark: ""
+                                  width: "150",
+                                  height: "20",
+                                  elevation: "1",
+                                  color: "#7F004F",
+                                  tile: "authorized"
                                 }
                               },
-                              [
-                                _vm._v(
-                                  "\n                            " +
-                                    _vm._s(item.authorized) +
-                                    "\n                        "
-                                )
-                              ]
+                              [_vm._v(_vm._s(item.authorized))]
                             )
                           ]
                         }
@@ -40026,16 +40009,16 @@ var render = function() {
                           var item = ref.item
                           return [
                             _c(
-                              "v-chip",
+                              "v-sheet",
                               {
+                                staticClass:
+                                  "d-flex m-2 justify-center white--text",
                                 attrs: {
-                                  color: _vm.getColor(item.user_type),
-                                  dark: ""
-                                },
-                                on: {
-                                  click: function($event) {
-                                    return _vm.editItem(item)
-                                  }
+                                  width: "150",
+                                  height: "20",
+                                  elevation: "1",
+                                  color: "#7F004F",
+                                  tile: "user_type"
                                 }
                               },
                               [_vm._v(_vm._s(item.user_type))]
@@ -92605,12 +92588,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuetify_lib_components_VApp__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuetify/lib/components/VApp */ "./node_modules/vuetify/lib/components/VApp/index.js");
 /* harmony import */ var vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuetify/lib/components/VBtn */ "./node_modules/vuetify/lib/components/VBtn/index.js");
 /* harmony import */ var vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vuetify/lib/components/VCard */ "./node_modules/vuetify/lib/components/VCard/index.js");
-/* harmony import */ var vuetify_lib_components_VChip__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vuetify/lib/components/VChip */ "./node_modules/vuetify/lib/components/VChip/index.js");
-/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/index.js");
-/* harmony import */ var vuetify_lib_components_VContent__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! vuetify/lib/components/VContent */ "./node_modules/vuetify/lib/components/VContent/index.js");
-/* harmony import */ var vuetify_lib_components_VDataTable__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! vuetify/lib/components/VDataTable */ "./node_modules/vuetify/lib/components/VDataTable/index.js");
-/* harmony import */ var vuetify_lib_components_VDialog__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! vuetify/lib/components/VDialog */ "./node_modules/vuetify/lib/components/VDialog/index.js");
-/* harmony import */ var vuetify_lib_components_VSelect__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! vuetify/lib/components/VSelect */ "./node_modules/vuetify/lib/components/VSelect/index.js");
+/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/index.js");
+/* harmony import */ var vuetify_lib_components_VContent__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! vuetify/lib/components/VContent */ "./node_modules/vuetify/lib/components/VContent/index.js");
+/* harmony import */ var vuetify_lib_components_VDataTable__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! vuetify/lib/components/VDataTable */ "./node_modules/vuetify/lib/components/VDataTable/index.js");
+/* harmony import */ var vuetify_lib_components_VDialog__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! vuetify/lib/components/VDialog */ "./node_modules/vuetify/lib/components/VDialog/index.js");
+/* harmony import */ var vuetify_lib_components_VSelect__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! vuetify/lib/components/VSelect */ "./node_modules/vuetify/lib/components/VSelect/index.js");
+/* harmony import */ var vuetify_lib_components_VSheet__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! vuetify/lib/components/VSheet */ "./node_modules/vuetify/lib/components/VSheet/index.js");
 /* harmony import */ var vuetify_lib_components_VTextField__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! vuetify/lib/components/VTextField */ "./node_modules/vuetify/lib/components/VTextField/index.js");
 
 
@@ -92648,7 +92631,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 
 
-_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VApp: vuetify_lib_components_VApp__WEBPACK_IMPORTED_MODULE_4__["VApp"],VBtn: vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_5__["VBtn"],VCard: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_6__["VCard"],VCardActions: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_6__["VCardActions"],VCardText: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_6__["VCardText"],VCardTitle: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_6__["VCardTitle"],VChip: vuetify_lib_components_VChip__WEBPACK_IMPORTED_MODULE_7__["VChip"],VContainer: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_8__["VContainer"],VContent: vuetify_lib_components_VContent__WEBPACK_IMPORTED_MODULE_9__["VContent"],VDataTable: vuetify_lib_components_VDataTable__WEBPACK_IMPORTED_MODULE_10__["VDataTable"],VDialog: vuetify_lib_components_VDialog__WEBPACK_IMPORTED_MODULE_11__["VDialog"],VFlex: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_8__["VFlex"],VLayout: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_8__["VLayout"],VSelect: vuetify_lib_components_VSelect__WEBPACK_IMPORTED_MODULE_12__["VSelect"],VSpacer: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_8__["VSpacer"],VTextField: vuetify_lib_components_VTextField__WEBPACK_IMPORTED_MODULE_13__["VTextField"]})
+_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VApp: vuetify_lib_components_VApp__WEBPACK_IMPORTED_MODULE_4__["VApp"],VBtn: vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_5__["VBtn"],VCard: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_6__["VCard"],VCardActions: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_6__["VCardActions"],VCardText: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_6__["VCardText"],VCardTitle: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_6__["VCardTitle"],VContainer: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_7__["VContainer"],VContent: vuetify_lib_components_VContent__WEBPACK_IMPORTED_MODULE_8__["VContent"],VDataTable: vuetify_lib_components_VDataTable__WEBPACK_IMPORTED_MODULE_9__["VDataTable"],VDialog: vuetify_lib_components_VDialog__WEBPACK_IMPORTED_MODULE_10__["VDialog"],VFlex: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_7__["VFlex"],VLayout: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_7__["VLayout"],VSelect: vuetify_lib_components_VSelect__WEBPACK_IMPORTED_MODULE_11__["VSelect"],VSheet: vuetify_lib_components_VSheet__WEBPACK_IMPORTED_MODULE_12__["VSheet"],VSpacer: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_7__["VSpacer"],VTextField: vuetify_lib_components_VTextField__WEBPACK_IMPORTED_MODULE_13__["VTextField"]})
 
 
 /* hot reload */
@@ -92728,8 +92711,8 @@ var opts = {};
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Harsh\Desktop\blog2- working test\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Harsh\Desktop\blog2- working test\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Harsh\Desktop\laravel-final\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Harsh\Desktop\laravel-final\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
