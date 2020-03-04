@@ -33,11 +33,6 @@ class UserTypesSeeder extends Seeder
             'user_name' =>'Registrar',
             ]);
         DB::table('usertypes')->insert([
-            'authorized' =>1,
-            'user_type' =>5,
-            'user_name' =>'Registrar',
-            ]);
-        DB::table('usertypes')->insert([
             'authorized' =>0,
             'user_type' =>6,
             'user_name' =>'Unauthorized',

@@ -62,7 +62,7 @@ class UserController extends Controller
                 
                 $authorized = $authorized_at;
             }else{
-                $authorized =$authorized_at;
+                $authorized ="UNAUTHORIZED";
             }
             
             //create each user record with user _type and authroized
