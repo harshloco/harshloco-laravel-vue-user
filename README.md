@@ -11,6 +11,9 @@ Steps to do :
 
 5: run command 'php artisan serve'
 
+## Demo Screenshot
+<p align="center"><img src="Untitled.png" width="400"></p>
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
